@@ -1,0 +1,32 @@
+{
+  "name": "trials-australia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trials Australia",
+  "author": "Matt Langtree",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "gatsby": "^3.10.2",
+    "gatsby-source-graphql": "^3.14.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "gatsby-plugin-postcss": "^4.10.0",
+    "gatsby-source-craft": "^2.0.3",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}
