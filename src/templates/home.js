@@ -24,6 +24,7 @@ export const query = graphql`
 const IndexPage = ({ data: { blogPosts, site }, pageContext }) => {
   return (
     <Layout>
+      <div className="max-w-screen-lg xl:max-w-screen-xl mx-auto">
       <h1 className="text-4xl text-black font-display my-4">
         <Link to="/">{site.siteMetadata.title}</Link>
       </h1>
@@ -72,6 +73,7 @@ const IndexPage = ({ data: { blogPosts, site }, pageContext }) => {
             )}
           </ul>
         </nav>
+      </div>
       </div>
     </Layout>
   )

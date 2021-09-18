@@ -11,6 +11,11 @@ export const query = graphql`
       id
       title
       postDate
+      postBody
+      url
+      author {
+          fullName
+      }
     }
   }
 `
@@ -20,6 +25,8 @@ const BlogPostPage = ({ data: { entry } }) => {
     <Layout>
       <h1 className="text-4xl text-black font-display my-4">{entry.title}</h1>
 
+      <div className="text-2xl text-black font-display my-4">{entry.author.fullName}</div>
+
       <time
         className="text-sm block pb-4"
         dateTime={getStandardDate(entry.postDate)}
@@ -27,6 +34,11 @@ const BlogPostPage = ({ data: { entry } }) => {
         {getPrettyDate(entry.postDate)}
       </time>
 
+      <div
+          dangerouslySetInnerHTML={{
+            __html: entry.postBody,
+          }}
+        ></div>
 
       {/* {% include "_private/matrix" with {blocks: entry.bodyContent.all()} %} */}
     </Layout>
